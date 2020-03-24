@@ -1,0 +1,9 @@
+.App {
+  width: calc(100% - 4.8rem);
+  max-width: 600px;
+  height: 100%;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}

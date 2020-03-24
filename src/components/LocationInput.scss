@@ -1,0 +1,20 @@
+.LocationInput {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.4rem;
+  }
+  &__input {
+    background: hsla(var(--theme-hue), 50%, 20%, 0.6);
+    color: var(--color-text);
+    border: none;
+    font-size: 1.8rem;
+    padding: 1.2rem;
+    width: auto;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: hsla(var(--theme-hue), 50%, 80%, 0.5);
+    }
+  }
+}

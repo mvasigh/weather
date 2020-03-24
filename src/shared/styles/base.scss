@@ -1,0 +1,42 @@
+:root {
+  --theme-hue: 280;
+  --color-background: hsl(var(--theme-hue), 70%, 20%);
+  --color-background-accent: hsl(calc(var(--theme-hue) + 40), 80%, 25%);
+  --color-text: hsl(var(--theme-hue), 50%, 95%);
+  --spacing-unit: 8px;
+}
+
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-background);
+  background: linear-gradient(
+    15deg,
+    var(--color-background) 0%,
+    var(--color-background-accent) 100%
+  );
+  color: var(--color-text);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

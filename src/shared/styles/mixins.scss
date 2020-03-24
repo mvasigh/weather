@@ -1,0 +1,5 @@
+@mixin animate($animation-name, $delay: 0ms) {
+  animation: 0.4s #{$animation-name} cubic-bezier(0.4, 0.87, 0.62, 1.1);
+  animation-fill-mode: forwards;
+  animation-delay: #{$delay};
+}
