@@ -5,7 +5,7 @@ import './App.scss';
 
 function App() {
   const [location, setLocation] = React.useState('Los Angeles');
-  const { weather, loading } = useWeather(location);
+  const { weather, loading, error } = useWeather(location);
 
   const handleSubmit = (location) => {
     setLocation(location);
@@ -34,6 +34,7 @@ function App() {
           <DailyForecast forecastData={weather.forecast.list} />
         </>
       )}
+      {error && <p className="App__error">{error}</p>}
     </main>
   );
 }

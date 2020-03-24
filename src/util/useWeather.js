@@ -17,13 +17,19 @@ function useWeather(location) {
       query.lon = _location.lon;
     }
     setLoading(true);
+    setWeather(null);
+    setError(null);
     Promise.all([api.currentWeather(query), api.forecast(query)])
       .then(([current, forecast]) => {
+        if (current.cod === '404' || forecast.cod === '404') {
+          throw new Error('Could not find city. Please try again.')
+        }
         setLoading(false);
         setWeather({ current, forecast });
       })
       .catch((e) => {
         setLoading(false);
+        setWeather(null);
         setError(e?.message ?? 'Unknown error occured');
       });
   }, [location]);
