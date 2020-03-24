@@ -3,7 +3,6 @@ import { LocationInput, CurrentWeather, DailyForecast } from 'components';
 import useWeather from 'util/useWeather';
 import './App.scss';
 
-// TODO: Display forecast
 function App() {
   const [location, setLocation] = React.useState('Los Angeles');
   const { weather, loading } = useWeather(location);
@@ -20,8 +19,6 @@ function App() {
       });
     });
   }, []);
-
-  console.log(weather);
 
   return (
     <main className="App">
